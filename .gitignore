@@ -204,5 +204,6 @@ plots/
 *.jpeg
 *.pdf
 *.svg
-/claude/*
+/claude_config/*
 *.sha1
+.python-version
