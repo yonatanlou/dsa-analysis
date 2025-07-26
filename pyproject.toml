@@ -1,0 +1,25 @@
+[project]
+name = "dsa-analysis"
+version = "0.1.0"
+description = "DSA data sampling pipeline for processing large EU Digital Services Act datasets"
+readme = "../docs/README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fastparquet>=2024.11.0",
+    "pyarrow>=21.0.0",
+    "tqdm>=4.67.1",
+]
+
+[dependency-groups]
+dev = [
+    "ipykernel>=6.30.0",
+    "matplotlib>=3.10.3",
+    "numpy>=2.3.1",
+    "pandas>=2.3.1",
+    "pre-commit>=4.2.0",
+    "pytest>=8.4.1",
+    "ruff>=0.12.5",
+    "scikit-learn>=1.7.1",
+    "seaborn>=0.13.2",
+    "statsmodels>=0.14.5",
+]
