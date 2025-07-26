@@ -206,4 +206,3 @@ plots/
 *.svg
 /claude_config/*
 *.sha1
-.python-version
