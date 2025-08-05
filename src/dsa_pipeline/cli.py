@@ -6,6 +6,7 @@ import sys
 from pathlib import Path
 from time import time
 
+
 from utils.logging_utils import setup_logging
 from utils.file_utils import cleanup_files
 from dsa_pipeline.date_utils import generate_date_chunks
@@ -43,7 +44,7 @@ Examples:
 def run_pipeline(args: argparse.Namespace) -> None:
     """Run the DSA sampling pipeline."""
     logger = logging.getLogger(__name__)
-    start = time.now()
+    start = time()
     try:
         # Validate arguments
         if not 0 < args.ratio <= 1:
@@ -92,7 +93,7 @@ def run_pipeline(args: argparse.Namespace) -> None:
                 cleanup_files(chunk_data_dir, chunk_extract_dir, staging_dir)
         
         logger.info("Pipeline completed successfully")
-        end = time.now()
+        end = time()
         logger.info(f"Total time taken: {end - start:.2f} seconds")
         
     except Exception as e:
